@@ -118,7 +118,10 @@ toplevel :
 /* A top-level command */
 Command :
   | Term 
-      { fun ctx -> (let t = $1 ctx in Eval(tmInfo t,t)),ctx }
+      { fun ctx -> (let t = $1 ctx in Eval(tmInfo t,t)),ctx } 
+  /* x/ */
+  | LCID Binder
+      { fun ctx -> ((Bind($1.i,$1.v,$2 ctx)), addname ctx $1.v) }
   
 /* Right-hand sides of top-level bindings */
 Binder :
