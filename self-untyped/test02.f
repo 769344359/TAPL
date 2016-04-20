@@ -1,9 +1,9 @@
-/* Examples for testing */
+/* Examples for testing; self-defined */
 
 true;
 if false then true else false; 
 
-if true then false else false;
+if true then true else false;
 
 lambda x. x;
 (lambda x. x) (lambda x. x x); 

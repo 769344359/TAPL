@@ -1,4 +1,4 @@
-/* Examples for testing */
+/* Examples for testing; some from arith */
 
 true;
 if false then true else false; 

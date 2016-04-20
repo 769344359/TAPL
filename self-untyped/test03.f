@@ -1,4 +1,4 @@
-/* Examples for testing */
+/* Examples for testing; self-defined */
 
 lambda x.x(lambda x.x);
 
