@@ -27,4 +27,4 @@ Lambda Calculus Implementation in OCaml（程序语言理论项目汇总）
 * 实现self-untyped主体部分，包括Chap3-4, 5-7中的定义的Term、Evaluation、Shift、和Substitution规则
 
 ###v1.0.2 (2016/04/20 13:00 +08:00)
-* [支持x/：将x加入namecontext](https://github.com/codedjw/TAPL/blob/master/README.md#L15)
+* [支持x/：将x加入namecontext](README.md#L15)
