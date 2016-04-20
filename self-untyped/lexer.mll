@@ -34,7 +34,7 @@ let reservedWords = [
   (".", fun i -> Parser.DOT i);
   (";", fun i -> Parser.SEMI i);
   (",", fun i -> Parser.COMMA i);
-  ("/", fun i -> Parser.SLASH i);
+  ("/", fun i -> Parser.SLASH i); (* use AT(@) to replace SLASH(/) *)
   (":", fun i -> Parser.COLON i);
   ("::", fun i -> Parser.COLONCOLON i);
   ("=", fun i -> Parser.EQ i);
@@ -53,6 +53,7 @@ let reservedWords = [
   ("|}", fun i -> Parser.BARRCURLY i);
   ("|>", fun i -> Parser.BARGT i);
   ("|]", fun i -> Parser.BARRSQUARE i);
+  ("@", fun i -> Parser.AT i); (* use AT(@) to replace SLASH(/) *)
 
   (* Special compound symbols: *)
   (":=", fun i -> Parser.COLONEQ i);

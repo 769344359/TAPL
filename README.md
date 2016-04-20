@@ -13,11 +13,11 @@ Lambda Calculus Implementation in OCaml（程序语言理论项目汇总）
 	* 参考arith
 	* 根据untyped和fulluntyped中的内容，加入Chap5-7的定义；实现难点：context、shift、substitution
 	* 仅支持INTV，和Chap3-4, 5-7中定义的Term、Evaluation、Shift、和Substitution规则
-	* 支持x/：将x加入namecontext
-		* x/ 被解析文件<br>
-		![image](https://github.com/codedjw/TAPL/raw/master/self-untyped/screenshot/x:被解析文件.png)
-		* x/ 解析结果<br>
-		![image](https://github.com/codedjw/TAPL/raw/master/self-untyped/screenshot/x:解析结果.png)
+	* 支持x@：将x加入namecontext(use AT(@) to replace SLASH(/))
+		* x@ 被解析文件<br>
+		![image](https://github.com/codedjw/TAPL/raw/master/self-untyped/screenshot/x@被解析文件.png)
+		* x@ 解析结果<br>
+		![image](https://github.com/codedjw/TAPL/raw/master/self-untyped/screenshot/x@解析结果.png)
 
 
 ##Change Log
@@ -25,4 +25,4 @@ Lambda Calculus Implementation in OCaml（程序语言理论项目汇总）
 * 实现self-untyped主体部分，包括Chap3-4, 5-7中的定义的Term、Evaluation、Shift、和Substitution规则
 
 ###v1.0.2 (2016/04/20 13:00 +08:00)
-* [支持x/：将x加入namecontext](https://github.com/codedjw/TAPL/blob/master/README.md#untyped-lambda-calculus-self-untyped)
+* [支持x@：将x加入namecontext](https://github.com/codedjw/TAPL/blob/master/README.md#untyped-lambda-calculus-self-untyped)

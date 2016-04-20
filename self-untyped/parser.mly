@@ -72,11 +72,12 @@ open Syntax
 %token <Support.Error.info> RPAREN
 %token <Support.Error.info> RSQUARE
 %token <Support.Error.info> SEMI
-%token <Support.Error.info> SLASH
+%token <Support.Error.info> SLASH /* use AT(@) to replace SLASH(/) */
 %token <Support.Error.info> STAR
 %token <Support.Error.info> TRIANGLE
 %token <Support.Error.info> USCORE
 %token <Support.Error.info> VBAR
+%token <Support.Error.info> AT /* use AT(@) to replace SLASH(/) */
 
 /* ---------------------------------------------------------------------- */
 /* The starting production of the generated parser is the syntactic class
@@ -125,7 +126,8 @@ Command :
   
 /* Right-hand sides of top-level bindings */
 Binder :
-    SLASH
+    /* SLASH */
+    AT /* use AT(@) to replace SLASH(/) */
       { fun ctx -> NameBind }
 
 Term :

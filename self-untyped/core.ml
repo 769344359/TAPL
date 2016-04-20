@@ -19,6 +19,7 @@ let rec isval ctx t = match t with
   | TmAbs(_,_,_) -> true
   | _ -> false
 
+(* merged version of P87 7.3 (untyped lambda calculus) and P47 4.2 (untyped arith) *)
 let rec eval1 ctx t = match t with
     TmIf(_,TmTrue(_),t2,t3) ->
       t2
