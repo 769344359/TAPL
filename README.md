@@ -15,7 +15,7 @@ Lambda Calculus Implementation in OCaml（程序语言理论项目汇总）
 	* 仅支持INTV，和Chap3-4, 5-7中定义的Term、Evaluation、Shift、和Substitution规则
 	* 支持x/：将x加入namecontext
 		* x/ 被解析文件<br>
-		![x:被解析文件](https://github.com/codedjw/TAPL/blob/master/self-untyped/screenshot/x:被解析文件.png, "x:被解析文件")
+		![image](https://github.com/codedjw/TAPL/raw/master/self-untyped/screenshot/x:被解析文件.png)
 		* x/ 解析结果<br>
 		![image](https://github.com/codedjw/TAPL/raw/master/self-untyped/screenshot/x:解析结果.png)
 
