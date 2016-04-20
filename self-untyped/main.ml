@@ -30,6 +30,7 @@ let parseArgs () =
       None -> err "You must specify an input file"
     | Some(s) -> s
 
+(* open a file to read *)
 let openfile infile = 
   let rec trynext l = match l with
         [] -> err ("Could not find " ^ infile)
@@ -39,6 +40,7 @@ let openfile infile =
             with Sys_error m -> trynext rest
   in trynext !searchpath
 
+(* parse a file by lex and yacc *)
 let parseFile inFile =
   let pi = openfile inFile
   in let lexbuf = Lexer.create inFile pi
@@ -50,6 +52,7 @@ in
 
 let alreadyImported = ref ([] : string list)
 
+(* do evaluation and binding *)
 let rec process_command ctx cmd = match cmd with
   | Eval(fi,t) -> 
       let t' = eval ctx t in
@@ -59,7 +62,8 @@ let rec process_command ctx cmd = match cmd with
   | Bind(fi,x,bind) -> 
       pr x; pr " "; prbinding ctx bind; force_newline();
       addbinding ctx x bind
-  
+
+(* process an input file *)  
 let process_file f ctx =
   alreadyImported := f :: !alreadyImported;
   let cmds,_ = parseFile f ctx in
