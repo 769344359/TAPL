@@ -2,7 +2,6 @@
 Lambda Calculus Implementation in OCaml（程序语言理论项目汇总）
 
 ##Overview（文件结构）
-----------
 ###Untyped lambda calculus (self-untyped)
 * Extend [arith](http://www.cis.upenn.edu/~bcpierce/tapl/) with arith with untyped lambda calculus
 * [Reference](http://www.cis.upenn.edu/~bcpierce/tapl/) 
@@ -22,7 +21,6 @@ Lambda Calculus Implementation in OCaml（程序语言理论项目汇总）
 
 
 ##Change Log
---------
 ###v1.0.1 (2016/04/20 05:00 +08:00)
 * 实现self-untyped主体部分，包括Chap3-4, 5-7中的定义的Term、Evaluation、Shift、和Substitution规则
 
