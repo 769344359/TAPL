@@ -1,5 +1,4 @@
 ## Simply Typed Lambda Calculus
----
 ###定义
 * Project 2: extend arith + untyped lambda calculus with types
 * Types: Bool, Nat, T->T

@@ -1,5 +1,4 @@
 ## Untyped Lambda Calculus
----
 ###执行方法
 * 使用make生成可执行文件f
 * 测试方法：./f 测试文件（或make test，即执行./f test.f）
