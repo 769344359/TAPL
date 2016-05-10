@@ -52,11 +52,11 @@ in
 
 let alreadyImported = ref ([] : string list)
 
-let prbindingty ctx b = 
+(*let prbindingty ctx b = 
   match b with
     NameBind -> ()
   | TyVarBind -> ()
-  | VarBind(tyT) -> pr ": "; printty ctx tyT
+  | VarBind(tyT) -> pr ": "; printty ctx tyT*) (* duplicated with prbinding *)
 
 (* do evaluation and binding *)
 let rec process_command ctx cmd = match cmd with
@@ -71,7 +71,7 @@ let rec process_command ctx cmd = match cmd with
       force_newline();
       ctx
   | Bind(fi,x,bind) -> 
-      pr x; pr " "; prbindingty ctx bind; force_newline();
+      pr x; pr " "; prbinding ctx bind; force_newline();
       addbinding ctx x bind
 
 (* process an input file *)  

@@ -28,7 +28,6 @@ type term =
 type binding = 
     NameBind (* no typing assumptions; for printing and parsing *)
   | VarBind of ty (* typing assumptions; for type checking *)
-  | TyVarBind
   
 type command =
   | Eval of info * term

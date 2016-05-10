@@ -28,7 +28,6 @@ type term =
 type binding = 
     NameBind (* for printing and parsing *)
   | VarBind of ty (* for type checking *)
-  | TyVarBind
   
 (* extended with untyped lambda calculus *)
 type context = (string * binding) list
@@ -124,7 +123,6 @@ let bindingshift d bind =
   match bind with
     NameBind -> NameBind
   | VarBind(tyT) -> VarBind(typeShift d tyT)
-  | TyVarBind -> TyVarBind
 (*  P80 6.2.4 *)
 let termSubst j s t =
   tmmap
@@ -309,5 +307,4 @@ let printtm ctx t = printtm_Term true ctx t
 let prbinding ctx b = match b with
     NameBind -> ()
   | VarBind(tyT) -> pr ": "; printty ctx tyT
-  | TyVarBind -> ()
 
