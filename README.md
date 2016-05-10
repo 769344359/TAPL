@@ -39,11 +39,11 @@ Lambda Calculus Implementation in OCaml（程序语言理论项目汇总）
 
 
 ##Change Log
-###v2.0.1 (2016/05/10 17:08 +08:00)
+###v2.0.2 (2016/05/10 17:08 +08:00)
 * 删除prbindingty in main.ml (duplicated with prbinding)
-* 删除TyBinder in parser.mly 和 TyVarBind in syntax.ml(mli) --> 现阶段不用？？
+* 删除TyBinder in parser.mly 和 TyVarBind in syntax.ml(mli) --> TyBinder和TyVarBind现阶段不用？？
 
-###v2.0.0 (2016/05/06 12:00 +08:00)
+###v2.0.1 (2016/05/06 12:00 +08:00)
 * 实现self-simply-typed主体部分，包括Chap8-10中的定义和规则
 
 ###v1.0.2 (2016/04/20 13:00 +08:00)
