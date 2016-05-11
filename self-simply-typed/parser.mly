@@ -123,7 +123,7 @@ toplevel :
 Command :
   | Term 
       { fun ctx -> (let t = $1 ctx in Eval(tmInfo t,t)),ctx } 
-  /* x/ */
+  /* x:Type */
   | LCID Binder
       { fun ctx -> ((Bind($1.i,$1.v,$2 ctx)), addname ctx $1.v) }
   
