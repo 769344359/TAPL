@@ -36,9 +36,25 @@ Lambda Calculus Implementation in OCaml（程序语言理论项目汇总）
 		* :Type (VarBind) 解析结果<br>
 		![image](https://github.com/codedjw/TAPL/raw/master/self-simply-typed/screenshot/VarBind解析结果.png)
 	
-
-
+###Simply Typed Lambda Calculus with Record and Subtyping (self-simply-sub)
+* Definition
+	* Project 3: extend arith + simply typed lambda calculus with records and subtypes
+	* Types: add {l1:T1,l2:T2,...,ln:Tn}, Top
+	* Syntax: add {l1=t1,l2=t2,...,ln=tn}
+	* Use algorithmic subtyping and typing rules, and do not change the typing rule for if-then-else.
+* [Reference](http://www.cis.upenn.edu/~bcpierce/tapl/) 
+	* Reference Book: [Type and Programming Languages](https://book.douban.com/subject/1761910/) 
+	* 参考rcdsubbot和fullsub中的内容，加入Chap15-16的定义；
+	* 实现难点：
+		* subtype(func)
+		* TmRecord, TyRecord
+		* TmProj(PathTerm in syntax.ml/parser.mly)
+		* Field(Type)s, NEField(Type)s, Field(Type) in parser.mly 
+	
 ##Change Log
+###v3.0.1 (2016/06/13 12:56 +08:00)
+* 实现self-simply-sub主体部分，包括Chap15-16中的定义和规则
+
 ###v2.0.2 (2016/05/10 17:08 +08:00)
 * 删除prbindingty in main.ml (duplicated with prbinding)
 * 删除TyBinder in parser.mly 和 TyVarBind in syntax.ml(mli) --> TyBinder和TyVarBind现阶段不用？？
