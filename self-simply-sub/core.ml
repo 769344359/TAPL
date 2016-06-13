@@ -135,6 +135,7 @@ let rec typeof ctx t =
         | TyArrow(tyT11, tyT12) ->
             (* TA-APP in P217 *) 
             if subtype ctx tyT2 tyT11 then tyT12
+	          (* if (=) tyT11 tyT2 then tyT12 *) (* simply-typed-lambda-calculus without subtyping / Project 2 *)
             else error fi "paramter type mismatch"
         | _ -> error fi "arrow type expected"
       )
