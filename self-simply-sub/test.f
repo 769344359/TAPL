@@ -1,3 +1,4 @@
+/* Examples for Project 3 */
 /* Record and Projection */
 
 {x=true, y=false}; 
@@ -18,15 +19,20 @@ lambda x:{a:Top}. x.a;
 (lambda x:Top. x) (lambda x:Top. x);
 (lambda x:Top->Top. x) (lambda x:Top. x);
 
-{x=lambda z:Top.z, y=lambda z:Top.z};
-(lambda r:{x:Top->Top}. r.x r.x) 
-  {x=lambda z:Top.z, y=lambda z:Top.z}; 
+/* more complex examples: Subtyping + Record + lambda */
 
 lambda r:{x:Top->Top}. r.x r.x;
+
+{x=lambda z:Top.z, y=lambda z:Top.z};
+{x=lambda z:Top.0, y=lambda z:Top.true};
+
+(lambda r:{x:Top->Top}. r.x r.x) 
+  {x=lambda z:Top.z, y=lambda z:Top.z}; 
 (lambda r:{x:Top->Top}. r.x r.x) 
   {x=lambda z:Top.0, y=lambda z:Top.true}; 
 
 /*
+/* Examples for Project 2 */
 /* Examples for testing */
 
 succ 0;
